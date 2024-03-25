@@ -118,3 +118,33 @@ export const menu =
     
 ];
 
+export const topDealUsers = [
+    {
+        id: 1,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAaYtVDMC1q1PMa5vLF93i5VUQlJg7aO3q7A&usqp=CAU",
+        username: "Jeffery Arizona",
+        email: "jarizone@gmail.com",
+        amount: "4.222",
+    },
+    {
+        id: 2,
+        img: "https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg",
+        username: "Jeniffer Weber",
+        email: "jweber@gmail.com",
+        amount: "3.899",
+    },
+    {
+        id: 3,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIljiSiiB_bNKlmJU9fWL5Q5OnHmEuPopMaA&usqp=CAU",
+        username: "Emma Swift",
+        email: "eswift@gmail.com",
+        amount: "3.111",
+    },
+    {
+        id: 4,
+        img: "https://media.istockphoto.com/id/1354898581/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=dDDNcvIoG-4VdO01ZlENqODBoNocT434vIFp0duuTZM=",
+        username: "Matthew Chan",
+        email: "mchan@gmail.com",
+        amount: "2.988",
+    },
+];
