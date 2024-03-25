@@ -2,8 +2,6 @@ import Home from "./pages/home/Home";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
   Outlet
 } from "react-router-dom";
 import Users from "./pages/users/Users";
@@ -23,7 +21,7 @@ function App() {
         <Menu/>
         </div>
         <div className="contentContainer">
-
+          <Outlet/>
         </div>
         </div>
         <Footer/>
@@ -33,18 +31,22 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/",
-      element: (
-       <Home/>
-      ),
-    },
-    {
-      path: "users",
-      element: <Users/>,
-    },
-    {
-      path: "products",
-      element: <Products/>,
+      path:"/",
+      element: <Layout/>,
+      children:[
+        {
+          path:"/",
+          element:<Home/>
+        },
+        {
+          path:"/users",
+          element:<Users/>
+        },
+        {
+          path:"/products",
+          element:<Products/>
+        },
+      ]
     },
   ]);
 
