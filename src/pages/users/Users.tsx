@@ -8,7 +8,7 @@ import { useState } from "react";
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90 },
     {
-        field: "avatar", headerName:"Avatar",width:100,
+        field: "img", headerName:"Avatar",width:100,
         renderCell: (params) =>{
             return <img src ={params.row.img || "/noavatar.png"} alt="" />
         },
@@ -43,6 +43,7 @@ const columns: GridColDef[] = [
         headerName: 'Created At',
         width: 150,
         editable: true,
+        type: "string"
     },
     {
         field: "verified", headerName: "Verified", width: 100, type: "boolean"
@@ -57,7 +58,7 @@ const Users = () => {
         <div className ="users">
             <div className="info">
                 <h1>Users</h1>
-                <button>Add New User</button>
+                <button onClick={()=> setOpen(true)}>Add New User</button>
             </div>
             <DataTable slug="users" columns = {columns} rows = {userRows}/>
             {open && <Add slug="user" columns = {columns} setOpen = {setOpen}/>}
