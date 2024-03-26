@@ -47,7 +47,6 @@ const PieChartBox = () => {
                     </div>
                     ))}
             </div>
-            
     </div>
   )
 }
