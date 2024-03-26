@@ -53,7 +53,7 @@ const Single = () => {
         <div className="view">
             <div className="info">
                 <div className="topInfo">
-                    <img src=""></img>
+                    <img src="https://media.istockphoto.com/id/1354898581/photo/shot-of-a-young-businessman-using-a-laptop-in-a-modern-office.jpg?s=612x612&w=0&k=20&c=dDDNcvIoG-4VdO01ZlENqODBoNocT434vIFp0duuTZM="></img>
                     <h1>John Doe</h1>
                     <button>Update</button>
                 </div>
@@ -72,6 +72,7 @@ const Single = () => {
                     </div>
                 </div>
             </div>
+            <hr/>
             <div className="chart">
             <ResponsiveContainer width="100%" height="100%">
         <LineChart
