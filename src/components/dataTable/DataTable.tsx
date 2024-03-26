@@ -15,7 +15,7 @@ const handleDelete = (id:number)=>{
 }
 const DataTable = (props:Props) => {
     const actionColumn:GridColDef = {
-        field:"ation",
+        field:"action",
         headerName: "Action",
         width:200,
         renderCell:(params)=>{

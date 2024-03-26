@@ -11,12 +11,19 @@ type Props = {
 
 
 const Add = (props:Props) => {
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
+        e.preventDefault();
+
+        //add new item
+        // axios.post(1/api/$slug)
+    }
   return (
     <div className="add">
         <div className="modal">
             <span className="close" onClick={()=> props.setOpen(false)}>X</span>
             <h1>Add new {props.slug}</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 {props.columns
                 .filter((item)=>item.field !== "id" && item.field !== "img")
                 .map((column)=>(
@@ -25,6 +32,7 @@ const Add = (props:Props) => {
                         <input type ={column.type} placeholder={column.field}></input>
                     </div>
                 ))}
+                <button>Send</button>
             </form>
         </div>
     </div>
