@@ -1,6 +1,6 @@
-import "./pieChartBox"
-import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts"
 
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts"
+import "./pieChartBox.scss"
 const data = [
     {name: "Mobile", value : 400, color: "#0088FE"},
     {name: "Desktop", value : 300, color: "#00C49F"},
@@ -31,22 +31,23 @@ const PieChartBox = () => {
              fill={item.color} />
           ))}
         </Pie>
+        
       </PieChart>
             </ResponsiveContainer>
+            </div>
 
             <div className="options">
                 {data.map(item=>(
                     <div className="option" key={item.name}>
                         <div className="title">
-                            <div className="dot"></div>
+                            <div className="dot" style={{backgroundColor: item.color}}></div>
                             <span>{item.name}</span>
                         </div>
                         <span>{item.value}</span>
                     </div>
-                    
                     ))}
             </div>
-        </div>
+            
     </div>
   )
 }
